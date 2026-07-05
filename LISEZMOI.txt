@@ -1,0 +1,72 @@
+CARNET JAPON 2026 — CRÉATION DU DÉPÔT GITHUB (repartir de zéro)
+
+============================================================
+CONTENU DE CE ZIP (6 fichiers) :
+  index.html            → l'application (v11)
+  manifest.webmanifest   → config PWA (icône, nom, mode plein écran)
+  sw.js                  → service worker (mode hors-ligne)
+  icon-192.png           → icône app
+  icon-512.png           → icône app
+  .nojekyll              → fichier VIDE obligatoire (empêche GitHub de
+                            traiter le site avec Jekyll et de planter)
+============================================================
+
+ÉTAPE 1 — Dézipper
+  Décompresse ce zip sur ton ordinateur. Tu dois obtenir un dossier avec
+  les 6 fichiers ci-dessus. Le fichier .nojekyll est caché par défaut
+  sur Mac (nom commençant par un point) — c'est normal, il est bien là.
+  Pour le voir dans le Finder : Cmd + Maj + . (point)
+
+ÉTAPE 2 — Créer le dépôt
+  1. Va sur https://github.com/new
+  2. Nom du dépôt : au choix (ex: carnetjp26)
+  3. Coche "Public"
+  4. Ne coche AUCUNE case d'initialisation (pas de README, pas de .gitignore)
+  5. Clique "Create repository"
+
+ÉTAPE 3 — Envoyer les fichiers (méthode simple : upload direct)
+  1. Sur la page du dépôt tout neuf, clique le lien
+     "uploading an existing file"
+     (ou plus tard : bouton "Add file" → "Upload files")
+  2. Glisse les 6 fichiers d'un coup dans la zone de dépôt
+     ⚠️ Glisse les FICHIERS, pas le dossier qui les contient
+     ⚠️ Si .nojekyll ne se glisse pas (fichier caché), affiche-le
+        d'abord avec Cmd+Maj+. avant de le sélectionner
+  3. En bas de page, clique "Commit changes"
+
+ÉTAPE 4 — Vérifier que .nojekyll est bien là
+  Sur la page principale du dépôt, tu dois voir .nojekyll dans la
+  liste des fichiers. S'il manque :
+    "Add file" → "Create new file" → tape ".nojekyll" comme nom
+    → laisse vide → "Commit changes"
+
+ÉTAPE 5 — Activer GitHub Pages
+  1. Onglet "Settings" du dépôt (en haut)
+  2. Menu de gauche → "Pages"
+  3. Source : "Deploy from a branch"
+  4. Branch : "main"   Dossier : "/ (root)"
+  5. Clique "Save"
+  6. Attends 1-2 minutes, rafraîchis la page : l'URL apparaît en haut,
+     du type https://TON-PSEUDO.github.io/NOM-DU-DEPOT/
+
+ÉTAPE 6 — Installer sur iPhone (mode hors-ligne)
+  1. Ouvre l'URL ci-dessus dans SAFARI (pas Chrome), avec le réseau activé
+  2. Bouton Partager (carré avec flèche) → "Sur l'écran d'accueil"
+  3. Lance l'app depuis la nouvelle icône : elle fonctionne ensuite
+     HORS-LIGNE (trains, montagne, digues sans réseau)
+
+============================================================
+POUR LES PROCHAINES MISES À JOUR (une fois le dépôt créé) :
+  Le plus simple reste l'upload direct :
+    "Add file" → "Upload files" → glisser le nouveau index.html
+    → GitHub demande confirmation de remplacement → "Commit changes"
+  Pas besoin de recréer tout le dépôt à chaque fois, seul index.html
+  change quand l'app évolue.
+
+NOTE SAUVEGARDE : tes données (coches, prises, budget, photos, QR)
+sont stockées sur TON appareil, séparément du code. Mettre à jour
+index.html ne les efface jamais. Utilise les boutons Export/Import
+(onglet 💾 Sauve) pour transférer entre iPhone et Mac.
+
+Si le déploiement échoue : onglet "Actions" du dépôt → clique le run
+en rouge → copie le message d'erreur et envoie-le pour diagnostic.
